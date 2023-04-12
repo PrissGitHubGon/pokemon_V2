@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 interface pokemonInterface {
   image: string;
   name: string;
+  apiTypes: any;
 }
 const Home = () => {
   const [data, setData]: any = useState();
@@ -39,15 +40,32 @@ const Home = () => {
               <img className="rounded-t-lg" src={pokemon.image} alt="" />
             </a>
             <div className="p-5">
-              <a href="/">
-                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  {pokemon.name}
-                </h5>
-              </a>
-              <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                Here are the biggest enterprise technology acquisitions of 2021
-                so far, in reverse chronological order.
-              </p>
+              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                {pokemon.name}
+              </h5>
+              <div className="">
+                <img
+                  src={pokemon.apiTypes[0].image}
+                  alt=""
+                  className="h-20 w-20 flex justify-center "
+                />
+                <p className="text-center text-sm">
+                  <p>{pokemon.apiTypes[0].name} </p>
+                </p>
+              </div>
+              {/* <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                type :
+                <div className="flex">
+                  <div>
+                    <img
+                      src={pokemon.apiTypes[0].image}
+                      alt=""
+                      className="h-20 w-20"
+                    />
+                    <p>{pokemon.apiTypes[0].name} </p>
+                  </div>
+                </div>
+              </p> */}
               <a
                 href="/"
                 className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
