@@ -1,0 +1,21 @@
+.hideMenuNav {
+  display: none;
+}
+.showMenuNav {
+  display: block;
+  position: absolute;
+  width: 100%;
+
+  top: 0;
+  left: 0;
+  background: #ff72c8;
+  background: linear-gradient(to right top, #00f2d2, #56f6ff, #abf5ff, #e6f6ff, #ffffff);
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.bg-pokemon{
+  background-image: linear-gradient(to right top, #00f2d2, #56f6ff, #abf5ff, #e6f6ff, #ffffff);
+}
