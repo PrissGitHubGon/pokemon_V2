@@ -9,8 +9,6 @@ interface pokemonInterface {
 const Home = () => {
   const [data, setData]: any = useState();
   const [isLoading, setIsLoading] = useState(true);
-  const [page, setPage] = useState(1);
-  const [input, setInput] = useState("");
 
   // @ts-ignore
   useEffect(() => {
@@ -26,7 +24,7 @@ const Home = () => {
       }
     };
     fetchData();
-  }, [page]);
+  }, []);
   return isLoading === true ? (
     <span className="loader" style={{ marginBottom: "430px" }}>
       Loading
