@@ -3,6 +3,6 @@ export type pokemonInterface = {
     name: string;
     apiTypes: any;
     id: number;
-  
+    data: string ;
   };
   

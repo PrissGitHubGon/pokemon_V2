@@ -41,13 +41,7 @@ const NavMobile = () => {
             <line x1="6" y1="6" x2="18" y2="18" />
           </svg>
         </div>
-        <ul className="flex flex-col items-center justify-between min-h-[300px] text-black ">
-          <li className="border-b-2 border-fuchsia-900 sm:border-fuchsia-600  sm:hover:border-fuchsia-800 my-8 uppercase">
-            <Link to="/home" onClick={closeSideBar}>
-              link
-            </Link>
-          </li>
-        </ul>
+        <ul className="flex flex-col items-center justify-between min-h-[300px] text-black "></ul>
       </div>
     </section>
   );

@@ -3,3 +3,8 @@
 @tailwind utilities;
 @import "./components/header.scss";
 @import "./components/loader.scss";
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+
+.font-DynaPuff {
+    font-family: 'DynaPuff', cursive;
+}

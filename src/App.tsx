@@ -3,21 +3,20 @@ import { Route, Routes } from "react-router-dom";
 import "./assets/scss/App.scss";
 import Header from "./components/Header";
 import Home from "./pages/Home";
-import ErrorBoundary from "./components/components/ErrorBoundary";
+
+import Pokedex from "./pages/Pokedex";
+import PokemonId from "./pages/Pokemon_id";
 
 function App() {
-  const { createMemoryHistory } = require("history");
-  const { Router } = require("react-router-dom");
-  const history = createMemoryHistory();
   return (
-    <ErrorBoundary>
-      <Router location={history.location} navigator={history}>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>{" "}
-      </Router>
-    </ErrorBoundary>
+    <>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/pokemon" element={<Pokedex />} />
+        <Route path="/pokemon/:pokemonId" element={<PokemonId />} />
+      </Routes>{" "}
+    </>
   );
 }
 
