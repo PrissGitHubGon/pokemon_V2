@@ -2,7 +2,7 @@
 import { Route, Routes } from "react-router-dom";
 import "./assets/scss/App.scss";
 import Header from "./components/Header";
-import Home from "./pages/Home";
+// import Home from "./pages/Home";
 
 import Pokedex from "./pages/Pokedex";
 import PokemonId from "./pages/Pokemon_id";
