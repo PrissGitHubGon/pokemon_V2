@@ -24,10 +24,10 @@ function App() {
                 <Sidebar>
                   {" "}
                   <Routes>
-                    <Route path="/" element={<Home />} />
+                    {/* <Route path="/" element={<Home />} /> */}
                     <Route path="/*" element={<Notfound />} />
-                    <Route path="/pokemon" element={<Pokedex />} />
-                    <Route path="/pokemon/:pokemonId" element={<PokemonId />} />
+                    <Route path="/" element={<Pokedex />} />
+                    <Route path="/:pokemonId" element={<PokemonId />} />
                   </Routes>{" "}
                 </Sidebar>
               </>

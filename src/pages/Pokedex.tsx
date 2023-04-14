@@ -42,7 +42,7 @@ function Pokedex() {
                 const id = pokemon.id;
                 return (
                   <ThumbnailCard
-                    link={`/pokemon/${id}`}
+                    link={`/${id}`}
                     key={id}
                     imageUrl={pokemon.image}
                     imageUrlBis={pokemon.image}
