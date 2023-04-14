@@ -30,7 +30,7 @@ const PokemonId = () => {
   ) : (
     <>
       <div
-        className="w-full md:w-full lg:w-full flex justify-center sm:pb-80 md:mt-10"
+        className="w-full md:w-full lg:w-full flex justify-center pb-16 mt-10 sm:pb-36 md:mt-10"
         key={params.pokemonId}
       >
         <div className="flex justify-center">
@@ -90,26 +90,29 @@ const PokemonId = () => {
                     {data?.apiTypes[0].name}
                   </p>
                 </div>
-                <div className="text-white-800 text-2xl md:text-4xl">
-                  <img
-                    src={data?.apiTypes[1].image}
-                    className=" h-10 ml-3 md:ml-1 "
-                    alt=""
-                  ></img>
-                  <p className="text-center text-sm font-DynaPuff">
-                    {data?.apiTypes[1].name}
-                  </p>
-                </div>
+
+                {data?.apiTypes[1] ? (
+                  <div className="text-white-800 text-2xl md:text-4xl">
+                    <img
+                      src={data?.apiTypes[1].image}
+                      className=" h-10 ml-3 md:ml-1 "
+                      alt=""
+                    ></img>
+                    <p className="text-center text-sm font-DynaPuff">
+                      {data?.apiTypes[1].name}
+                    </p>
+                  </div>
+                ) : null}
               </div>
             </div>
           </div>
         </div>
       </div>
       <a href="/pokemon" className="">
-        <div className="ball "></div>
+        {/* <div className="ball "></div> */}
 
-        <p className="text-center pl-4 italic bg-clip-text text-transparent bg-gradient-to-r from-red-900 via-orange-800 to-amber-700 font-bold">
-          retour
+        <p className="text-center text-3xl pl-4 italic bg-clip-text text-transparent bg-gradient-to-r from-red-900 via-orange-800 to-amber-700 font-bold">
+          Retour
         </p>
       </a>
     </>
