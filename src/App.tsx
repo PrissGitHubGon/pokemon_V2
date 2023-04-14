@@ -6,7 +6,7 @@ import Home from "./pages/Home";
 
 import Pokedex from "./pages/Pokedex";
 import PokemonId from "./pages/Pokemon_id";
-// import Notfound from "./pages/NotFound";
+import Notfound from "./pages/NotFound";
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/*" element={<Notfound />} /> */}
+        <Route path="/*" element={<Notfound />} />
         <Route path="/pokemon" element={<Pokedex />} />
         <Route path="/pokemon/:pokemonId" element={<PokemonId />} />
       </Routes>{" "}
