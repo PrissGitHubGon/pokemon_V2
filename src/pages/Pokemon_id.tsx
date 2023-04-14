@@ -6,10 +6,9 @@ import { pokemonInterface } from "../entities/pokemon-interface";
 import LoaderPokeball from "../components/components/Loader-pokeball";
 
 const PokemonId = () => {
-  const [data, setData] = useState<pokemonInterface | undefined>(); // Utilisation de undefined plutôt que any
-  const [isLoading, setIsLoading] = useState<boolean>(true); // Typage de isLoading en tant que booléen
-  const params = useParams<{ pokemonId: string }>(); // Typage de params en précisant que pokemonId est une chaîne de caractères
-
+  const [data, setData] = useState<pokemonInterface | undefined>();
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const params = useParams<{ pokemonId: string }>();
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -44,40 +43,7 @@ const PokemonId = () => {
               <h5 className="text-gray-900 text-4xl font-medium mb-4 text-center font-DynaPuff">
                 {data?.name}
               </h5>
-              {/* <p className="text-gray-700 text-base mb-4">
-                <Translate id="Vinted_text" />
-              </p>
-              <p className="text-gray-900 text-lg font-medium mb-2">
-                <Translate id="Vinted_text1" />
-              </p>
 
-              <ol className="text-gray-700 text-base mb-4 ">
-                <li className="list-disc">
-                  <Translate id="Vinted_li1" />
-                </li>{" "}
-                <br />
-                <li className="list-disc">
-                  <Translate id="Vinted_li2" />
-                </li>
-                <br />
-              </ol>
-              <p className="text-gray-900 text-lg font-medium mb-2">
-                <Translate id="Vinted_text2" />
-              </p>
-
-              <ol className="text-gray-700 text-base mb-4 ">
-                <li className="list-disc">
-                  <Translate id="Vinted_li3" />
-                </li>{" "}
-                <br />
-                <li className="list-disc">
-                  <Translate id="Vinted_li4" />
-                </li>
-                <br />
-                <li className="list-disc pb-5 border-b-2">
-                  <Translate id="Vinted_li5" />
-                </li>
-              </ol> */}
               <div className=" pb-5 border-b-2"></div>
               <div className="flex flex-row justify-center space-x-14 pt-3">
                 <div className="text-white-800 text-2xl md:text-4xl">

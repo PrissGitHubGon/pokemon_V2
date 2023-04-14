@@ -30,7 +30,7 @@ const Sidebar = (props: any) => {
                   const id = pokemon.id;
                   return (
                     <li className="my-2">
-                      <Link to={`/pokemon/${id}`}>{pokemon?.name} </Link>
+                      <Link to={`/${id}`}>{pokemon?.name} </Link>
                     </li>
                   );
                 })}
