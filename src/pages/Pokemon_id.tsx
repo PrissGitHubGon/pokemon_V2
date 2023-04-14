@@ -102,7 +102,9 @@ const PokemonId = () => {
                       {data?.apiTypes[1].name}
                     </p>
                   </div>
-                ) : null}
+                ) : (
+                  ""
+                )}
               </div>
             </div>
           </div>
