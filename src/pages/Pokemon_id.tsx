@@ -2,7 +2,6 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-import { useNavigate } from "react-router-dom";
 import { pokemonInterface } from "../entities/pokemon-interface";
 import LoaderPokeball from "../components/components/Loader-pokeball";
 
@@ -10,7 +9,6 @@ const PokemonId = () => {
   const [data, setData] = useState<pokemonInterface | undefined>(); // Utilisation de undefined plutôt que any
   const [isLoading, setIsLoading] = useState<boolean>(true); // Typage de isLoading en tant que booléen
   const params = useParams<{ pokemonId: string }>(); // Typage de params en précisant que pokemonId est une chaîne de caractères
-  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
