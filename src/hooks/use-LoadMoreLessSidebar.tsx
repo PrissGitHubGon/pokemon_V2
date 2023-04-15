@@ -4,7 +4,7 @@ import { pokemonInterface } from "../entities/pokemon-interface";
 
 const useLoadMoreOrLessSidebar = () => {
   const { data } = usePokemons();
-  const chunkSize = 1;
+  const chunkSize = 5;
   const [startIndexSidebar] = useState(0);
   const [endIndex, setEndIndex] = useState(chunkSize);
 

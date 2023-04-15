@@ -20,7 +20,7 @@ function App() {
             <Col lg="2" md="3" className="  p-0 m-0 ">
               <Header />
             </Col>
-            <Col lg="10" md="9" className=" m-0 p-0 paddingB-layout">
+            <Col lg="10" md="9" className=" m-0 p-0 paddingB-layout ">
               <>
                 <Sidebar>
                   {" "}

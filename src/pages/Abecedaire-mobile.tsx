@@ -16,9 +16,9 @@ const AbecedaireMobile = () => {
         <LoaderPokeball />
       ) : (
         <>
-          <div className="flex gap-4 overflow-hidden flex-wrap py-12 mb-16  place-content-center">
+          <div className="flex  overflow-hidden flex-wrap  ">
             {uniqueLetters.map((letter) => (
-              <div className=" text-center relative lg:w-52 lg:h-52 md:w-40 md:h-40  w-24 h-24 cursor-pointer ">
+              <div className="  relative  cursor-pointer ">
                 <AccordionMobile
                   title={letter}
                   text={sortedData
@@ -29,12 +29,12 @@ const AbecedaireMobile = () => {
                     .map((pokemon: pokemonInterface) => {
                       const id = pokemon.id;
                       return (
-                        <>
+                        <div className="">
                           {" "}
-                          <li className="my-2 font-DynaPuff " key={id}>
+                          <li className=" font-DynaPuff " key={id}>
                             <Link to={`/${id}`}>{pokemon?.name}</Link>
                           </li>
-                        </>
+                        </div>
                       );
                     })}
                 />
