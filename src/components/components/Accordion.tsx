@@ -6,6 +6,7 @@ import {
 import { useState, Fragment } from "react";
 
 const AccordionMobile = (props: any) => {
+  const { moreLessButton, text, title } = props;
   const [open, setOpen] = useState(0);
 
   const handleOpen = (value: any) => {
@@ -20,10 +21,11 @@ const AccordionMobile = (props: any) => {
   return (
     <Fragment>
       <Accordion open={open === 1} animate={customAnimation}>
-        <AccordionHeader onClick={() => handleOpen(1)}>
-          {props.title}
-        </AccordionHeader>
-        <AccordionBody>{props.text}</AccordionBody>
+        <AccordionHeader onClick={() => handleOpen(1)}>{title}</AccordionHeader>
+        <AccordionBody>
+          {text}
+          {moreLessButton}
+        </AccordionBody>
       </Accordion>
     </Fragment>
   );

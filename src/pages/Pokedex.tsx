@@ -39,11 +39,11 @@ function Pokedex() {
             {filteredPokemons
               .slice(startIndex, endIndex)
               .map((pokemon: pokemonInterface) => {
-                const id = pokemon.id;
+                // const id = pokemon.id;
                 return (
                   <ThumbnailCard
-                    link={`/${id}`}
-                    key={id}
+                    link={`/${pokemon.id}`}
+                    key={pokemon.id}
                     imageUrl={pokemon.image}
                     imageUrlBis={pokemon.image}
                     imageUrlTitleAlt={pokemon.name}
