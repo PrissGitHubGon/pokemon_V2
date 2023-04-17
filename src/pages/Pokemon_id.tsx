@@ -34,7 +34,7 @@ const PokemonId = () => {
               </div>
             </div>
             <img
-              className="mx-auto w-full h-96 md:h-auto border-4 border-yellow-200 m-1 object-cover md:w-56 rounded-lg  md:rounded-lg"
+              className="mx-auto object-contain md:object-cover h-96 md:h-auto border-4 border-yellow-200 m-1  md:w-56 rounded-lg  md:rounded-lg"
               src={data?.image}
               alt={data?.name}
             />
