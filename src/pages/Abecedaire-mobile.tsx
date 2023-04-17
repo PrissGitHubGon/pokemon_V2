@@ -23,9 +23,9 @@ const AbecedaireMobile = () => {
         <LoaderPokeball />
       ) : (
         <>
-          <div className="flex  flex-wrap  ">
+          <div className="flex  flex-wrap justify-center w-100  ">
             {uniqueLetters.map((letter) => (
-              <div className="  relative  cursor-pointer ">
+              <div className=" relative  cursor-pointer ">
                 <AccordionMobile
                   title={letter}
                   text={sortedData
@@ -39,7 +39,7 @@ const AbecedaireMobile = () => {
                         <div className="">
                           {" "}
                           <li
-                            className=" font-DynaPuff cursor-pointer"
+                            className=" font-DynaPuff cursor-pointer text-lg"
                             key={id}
                           >
                             <Link to={`/${id}`}>{pokemon?.name}</Link>

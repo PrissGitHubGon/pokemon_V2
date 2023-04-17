@@ -21,7 +21,12 @@ const AccordionMobile = (props: any) => {
   return (
     <Fragment>
       <Accordion open={open === 1} animate={customAnimation}>
-        <AccordionHeader onClick={() => handleOpen(1)}>{title}</AccordionHeader>
+        <AccordionHeader
+          onClick={() => handleOpen(1)}
+          className="font-DynaPuff text-4xl"
+        >
+          {title}
+        </AccordionHeader>
         <AccordionBody>
           {text}
           {moreLessButton}
