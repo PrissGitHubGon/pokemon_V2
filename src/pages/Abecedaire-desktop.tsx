@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { pokemonInterface } from "../entities/pokemon-interface";
 import useLoadMoreOrLessSidebar from "../hooks/use-LoadMoreLessSidebar";
+import ThumbnailCard from "../components/components/Thumbnail";
 
 const AbecedaireDesktop = (props: any) => {
   const { keyLetter, letter } = props;
@@ -22,13 +23,21 @@ const AbecedaireDesktop = (props: any) => {
             .filter((pokemon) => pokemon.name[0].toUpperCase() === letter)
             .slice(startIndexSidebar, endIndex)
             .map((pokemon: pokemonInterface) => {
-              const id = pokemon.id;
+              //   const id = pokemon.id;
               return (
                 <>
                   {" "}
-                  <li className="my-2 font-DynaPuff " key={id}>
+                  {/* <li className="my-2 font-DynaPuff " key={id}>
                     <Link to={`/${id}`}>{pokemon?.name}</Link>
-                  </li>
+                  </li> */}
+                  <ThumbnailCard
+                    link={`/${pokemon.id}`}
+                    key={pokemon.id}
+                    imageUrl={pokemon.image}
+                    imageUrlBis={pokemon.image}
+                    imageUrlTitleAlt={pokemon.name}
+                    imageUrlTitle={pokemon.name}
+                  />
                 </>
               );
             })}
