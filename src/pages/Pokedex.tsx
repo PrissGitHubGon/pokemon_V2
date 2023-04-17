@@ -4,6 +4,8 @@ import LoaderPokeball from "../components/components/Loader-pokeball";
 import ThumbnailCard from "../components/components/Thumbnail";
 import usePokemons from "../hooks/use-pokemons";
 import useLoadMoreOrLess from "../hooks/use-LoadMoreLess";
+import Error404 from "./404";
+import ErrorBoundary from "../components/components/ErrorBoundary";
 
 function Pokedex() {
   const { data, isLoading } = usePokemons();
@@ -75,4 +77,12 @@ function Pokedex() {
   );
 }
 
-export default Pokedex;
+function App() {
+  return (
+    <ErrorBoundary fallback={<Error404 />}>
+      <Pokedex />
+    </ErrorBoundary>
+  );
+}
+
+export default App;
