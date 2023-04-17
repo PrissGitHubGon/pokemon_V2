@@ -77,15 +77,23 @@ const PokemonId = () => {
         </div>
       </div>
       <Link to="/" className="hidden md:block">
-        <p className="text-center text-3xl pl-4 italic bg-clip-text text-transparent bg-gradient-to-r from-red-900 via-orange-800 to-amber-700 font-bold">
+        <p className="text-center text-3xl italic bg-clip-text text-transparent bg-gradient-to-r from-red-900 via-orange-800 to-amber-700 font-bold">
           Retour
         </p>
       </Link>
-      <Link to="/abecedaire" className="md:hidden">
-        <p className="text-center text-3xl pl-4 italic bg-clip-text text-transparent bg-gradient-to-r from-red-900 via-orange-800 to-amber-700 font-bold">
-          Retour
-        </p>
-      </Link>
+
+      <div className="md:hidden flex justify-between  ">
+        <Link to="/abecedaire">
+          <p className="text-center text-xl  italic bg-clip-text text-transparent bg-gradient-to-r from-red-900 via-orange-800 to-amber-700 font-bold">
+            Retour abécédaire
+          </p>
+        </Link>
+        <Link to="/">
+          <p className="text-center text-xl pl-4 italic bg-clip-text text-transparent bg-gradient-to-r from-red-900 via-orange-800 to-amber-700 font-bold">
+            Retour Pokedex
+          </p>
+        </Link>
+      </div>
     </>
   );
 };
