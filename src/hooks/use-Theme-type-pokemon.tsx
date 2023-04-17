@@ -11,6 +11,9 @@ const useThemeTypePokemon = () => {
   const typeTenebre = "bg-gradient-to-r from-stone-400  to-stone-200 p-3";
   const typeFeu = "bg-gradient-to-r from-amber-400  to-amber-200 p-3";
   const typeEau = "bg-gradient-to-r from-sky-400  to-sky-200 p-3";
+  const typeRoche = "bg-gradient-to-r from-amber-800  to-amber-200 p-3";
+  const typeElectrik = "bg-gradient-to-r from-yellow-200  to-yellow-400 p-3";
+  const typeInsecte = "bg-gradient-to-r from-lime-600  to-lime-300 p-3";
 
   const PokemonType = () => {
     if (data?.apiTypes[0].name === "Poison") {
@@ -19,12 +22,20 @@ const useThemeTypePokemon = () => {
       return typeVol;
     } else if (data?.apiTypes[0].name === "Psy") {
       return typePsy;
-    } else if (data?.apiTypes[0].name === "Ténèbres" && "Acier" && "Normal") {
+    } else if (data?.apiTypes[0].name === "Ténèbres") {
+      return typeTenebre;
+    } else if (data?.apiTypes[0].name === "Normal") {
       return typeTenebre;
     } else if (data?.apiTypes[0].name === "Feu") {
       return typeFeu;
     } else if (data?.apiTypes[0].name === "Eau") {
       return typeEau;
+    } else if (data?.apiTypes[0].name === "Roche") {
+      return typeRoche;
+    } else if (data?.apiTypes[0].name === "Électrik") {
+      return typeElectrik;
+    } else if (data?.apiTypes[0].name === "Insecte") {
+      return typeInsecte;
     } else {
       return noType;
     }
