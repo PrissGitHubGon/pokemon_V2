@@ -7,7 +7,7 @@ import useLoadMoreOrLess from "../hooks/use-LoadMoreLess";
 import Error404 from "./404";
 import ErrorBoundary from "../components/components/ErrorBoundary";
 
-function Pokedex() {
+const Pokedex = () => {
   const { data, isLoading } = usePokemons();
   const { startIndex, handleClickLoadMore, handleClickLoadLess, endIndex } =
     useLoadMoreOrLess();
@@ -42,14 +42,16 @@ function Pokedex() {
               .slice(startIndex, endIndex)
               .map((pokemon: pokemonInterface) => {
                 return (
-                  <ThumbnailCard
-                    link={`/${pokemon.id}`}
-                    key={pokemon.id}
-                    imageUrl={pokemon.image}
-                    imageUrlBis={pokemon.image}
-                    imageUrlTitleAlt={pokemon.name}
-                    imageUrlTitle={pokemon.name}
-                  />
+                  <ErrorBoundary fallback={<Error404 />}>
+                    <ThumbnailCard
+                      link={`/${pokemon.id}`}
+                      key={pokemon.id}
+                      imageUrl={pokemon.image}
+                      imageUrlBis={pokemon.image}
+                      imageUrlTitleAlt={pokemon.name}
+                      imageUrlTitle={pokemon.name}
+                    />
+                  </ErrorBoundary>
                 );
               })}
             <div className="flex justify-center w-full my-4">
@@ -75,14 +77,6 @@ function Pokedex() {
       </div>
     </div>
   );
-}
+};
 
-function App() {
-  return (
-    <ErrorBoundary fallback={<Error404 />}>
-      <Pokedex />
-    </ErrorBoundary>
-  );
-}
-
-export default App;
+export default Pokedex;
