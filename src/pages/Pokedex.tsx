@@ -6,6 +6,7 @@ import usePokemons from "../hooks/use-pokemons";
 import useLoadMoreOrLess from "../hooks/use-LoadMoreLess";
 import Error404 from "./404";
 import ErrorBoundary from "../components/components/ErrorBoundary";
+import { Link } from "react-router-dom";
 
 const Pokedex = () => {
   const { data, isLoading } = usePokemons();
@@ -49,7 +50,11 @@ const Pokedex = () => {
                       imageUrl={pokemon.image}
                       imageUrlBis={pokemon.image}
                       imageUrlTitleAlt={pokemon.name}
-                      imageUrlTitle={pokemon.name}
+                      children={
+                        <p className="my-2 font-DynaPuff " key={pokemon.id}>
+                          <Link to={`/${pokemon.id}`}>{pokemon?.name}</Link>
+                        </p>
+                      }
                     />
                   </ErrorBoundary>
                 );

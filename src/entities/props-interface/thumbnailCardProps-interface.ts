@@ -3,7 +3,8 @@ export type thumbnailCardPropsInterface = {
     imageUrl: string;
     imageUrlBis: string;
     imageUrlTitleAlt: string;
-    imageUrlTitle: string;
+    imageUrlTitle?: string;
     key?:number;
+    children?:any
   };
   
