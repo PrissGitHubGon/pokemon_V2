@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
@@ -76,16 +76,16 @@ const PokemonId = () => {
           </div>
         </div>
       </div>
-      <a href="/" className="hidden md:block">
+      <Link to="/" className="hidden md:block">
         <p className="text-center text-3xl pl-4 italic bg-clip-text text-transparent bg-gradient-to-r from-red-900 via-orange-800 to-amber-700 font-bold">
           Retour
         </p>
-      </a>
-      <a href="/abecedaire" className="md:hidden">
+      </Link>
+      <Link to="/abecedaire" className="md:hidden">
         <p className="text-center text-3xl pl-4 italic bg-clip-text text-transparent bg-gradient-to-r from-red-900 via-orange-800 to-amber-700 font-bold">
           Retour
         </p>
-      </a>
+      </Link>
     </>
   );
 };
