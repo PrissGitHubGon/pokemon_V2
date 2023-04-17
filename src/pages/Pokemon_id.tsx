@@ -1,57 +1,63 @@
-import { Link, useParams } from "react-router-dom";
-import axios from "axios";
-import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
-import { pokemonInterface } from "../entities/pokemon-interface";
 import LoaderPokeball from "../components/components/Loader-pokeball";
+import useThemeTypePokemon from "../hooks/use-Theme-type-pokemon";
+import usePokemonId from "../hooks/use-pokemon-id";
 
 const PokemonId = () => {
-  const [data, setData] = useState<pokemonInterface | undefined>();
-  const [isLoading, setIsLoading] = useState<boolean>(true);
-  const params = useParams<{ pokemonId: string }>();
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(
-          `https://pokebuildapi.fr/api/v1/pokemon/${params.pokemonId}`
-        );
-        setData(response.data);
-        setIsLoading(false);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    fetchData();
-  }, [params.pokemonId]);
+  const { PokemonType } = useThemeTypePokemon();
+  const { data, isLoading, params } = usePokemonId();
 
   return isLoading ? (
     <LoaderPokeball />
   ) : (
     <>
       <div
-        className="w-full md:w-full lg:w-full flex justify-center pb-16 mt-10 sm:pb-36 md:mt-10"
+        className="w-full  flex justify-center  pb-16 mt-10 sm:pb-36 md:mt-10"
         key={params.pokemonId}
       >
-        <div className="flex justify-center">
-          <div className="flex flex-col md:flex-row md:max-w-3xl rounded-lg bg-white shadow-lg">
+        <div className="flex border-8 rounded-md border-yellow-200 justify-center ">
+          <div className={PokemonType()}>
+            <div className="flex justify-between w-11/12 mx-auto">
+              <p className="font-DynaPuff">{data?.name}</p>
+              <div className="flex">
+                <p>
+                  <span className="text-xs font-DynaPuff ">PV</span>
+                  {/* @ts-ignore */}
+                  <span className="font-bold">{data?.stats?.HP}</span>
+                </p>
+                <img
+                  src={data?.apiTypes[0].image}
+                  alt=""
+                  className=" h-5 ml-3 md:ml-1 "
+                />
+              </div>
+            </div>
             <img
-              className=" w-full h-96 md:h-auto object-cover md:w-56 rounded-t-lg md:rounded-none md:rounded-l-lg"
+              className="mx-auto w-full h-96 md:h-auto border-4 border-yellow-200 m-1 object-cover md:w-56 rounded-lg  md:rounded-lg"
               src={data?.image}
               alt={data?.name}
             />
-            <div className="p-6 flex flex-col justify-start">
-              <h5 className="text-gray-900 text-4xl font-medium mb-4 text-center font-DynaPuff">
-                {data?.name}
-              </h5>
+            <div className="flex flex-col justify-start ">
+              <div className=" pb-5 border-b-2 border-yellow-200"></div>
+              <p className="font-DynaPuff pt-3">Types :</p>
+              <div
+                className={
+                  data?.apiTypes[1]
+                    ? "flex flex-row justify-center space-x-10 pt-3"
+                    : "flex my-2"
+                }
+              >
+                <div className="text-white-800 text-2xl md:text-4xl ">
+                  <div className="flex justify-center">
+                    {" "}
+                    <img
+                      src={data?.apiTypes[0].image}
+                      className=" h-5 ml-3 md:ml-1 "
+                      alt=""
+                    />
+                  </div>
 
-              <div className=" pb-5 border-b-2"></div>
-              <div className="flex flex-row justify-center space-x-14 pt-3">
-                <div className="text-white-800 text-2xl md:text-4xl">
-                  <img
-                    src={data?.apiTypes[0].image}
-                    className=" h-10 ml-3 md:ml-1 "
-                    alt=""
-                  ></img>
                   <p className="text-center text-sm font-DynaPuff">
                     {data?.apiTypes[0].name}
                   </p>
@@ -59,11 +65,15 @@ const PokemonId = () => {
 
                 {data?.apiTypes[1] ? (
                   <div className="text-white-800 text-2xl md:text-4xl">
-                    <img
-                      src={data?.apiTypes[1].image}
-                      className=" h-10 ml-3 md:ml-1 "
-                      alt=""
-                    ></img>
+                    <div className="flex justify-center">
+                      {" "}
+                      <img
+                        src={data?.apiTypes[1].image}
+                        className=" h-5 ml-3 md:ml-1 "
+                        alt=""
+                      ></img>
+                    </div>
+
                     <p className="text-center text-sm font-DynaPuff">
                       {data?.apiTypes[1].name}
                     </p>
@@ -73,6 +83,14 @@ const PokemonId = () => {
                 )}
               </div>
             </div>
+            <div className=" pb-5 border-b-2 border-yellow-200"></div>
+            <p className="text-xs py-2 font-DynaPuff">
+              Génération{" "}
+              <span className="text-sm font-sans font-bold ml-1">
+                {" "}
+                {data?.apiGeneration}
+              </span>
+            </p>
           </div>
         </div>
       </div>
