@@ -38,12 +38,12 @@ const AbecedaireMobile = () => {
                       return (
                         <div className="">
                           {" "}
-                          <li
+                          <p
                             className=" font-DynaPuff cursor-pointer text-lg"
                             key={id}
                           >
                             <Link to={`/${id}`}>{pokemon?.name}</Link>
-                          </li>
+                          </p>
                         </div>
                       );
                     })}

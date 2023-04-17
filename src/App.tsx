@@ -10,6 +10,7 @@ import Notfound from "./pages/NotFound";
 import { Col, Container, Row } from "reactstrap";
 import Sidebar from "./components/components/sidebar";
 import AbecedaireMobile from "./pages/Abecedaire-mobile";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
               </>
             </Col>
           </Row>
+          <Footer />
         </Container>
       </>
     </>

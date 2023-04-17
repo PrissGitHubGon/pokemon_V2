@@ -14,11 +14,11 @@ const Sidebar = (props: any) => {
         <LoaderPokeball />
       ) : (
         <>
-          <div className=" bg-pokemon-sidebar text-white w-32 md:w-64 px-4 py-6 flex-shrink-0 hidden sm:block">
-            <h1 className="text-xl  md:text-3xl font-semibold mb-4 font-DynaPuff text-center">
+          <div className=" bg-pokemon-sidebar text-white w-32 md:w-36 px-4 py-6 flex-shrink-0 hidden sm:block ">
+            {/* <h1 className="text-xl  md:text-2xl font-semibold mb-4 font-DynaPuff text-center">
               Abécédaire
-            </h1>
-            <ul className="text-gray-500">
+            </h1> */}
+            <ul className="text-gray-500 ">
               {uniqueLetters.map((letter) => (
                 <>
                   <AbecedaireDesktop

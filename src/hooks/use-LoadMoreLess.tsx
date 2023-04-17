@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const useLoadMoreOrLess = () => {
-  const chunkSize = 16;
+  const chunkSize = 40;
   const [startIndex] = useState(0);
   const [endIndex, setEndIndex] = useState(chunkSize);
 
