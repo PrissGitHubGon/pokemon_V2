@@ -27,14 +27,14 @@ const ThumbnailCard = (props: thumbnailCardPropsInterface) => {
             alt={imageUrlTitleAlt}
             className="w-full aspect-square hidden"
           />
-          <div className="h-full w-full aspect-square block absolute top-0 left-0 transition-opacity duration-300 opacity-0 hover:opacity-80 bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% z-10 rounded-lg">
+          <div className="h-full w-full  rounded-lg">
             <h3 className="text-white py-8 lg:py-20 px-3 mx-auto lg:text-3xl text-md">
               {imageUrlTitle}
             </h3>
           </div>{" "}
         </Link>
       </div>{" "}
-      <h3 className="text-black text-center md:hidden font-DynaPuff  mx-auto lg:text-3xl text-md">
+      <h3 className="text-black text-center font-DynaPuff  mx-auto lg:text-3xl text-md">
         {children}
       </h3>
     </div>

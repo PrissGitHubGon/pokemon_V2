@@ -36,6 +36,22 @@ const useThemeTypePokemon = () => {
       return typeElectrik;
     } else if (data?.apiTypes[0].name === "Insecte") {
       return typeInsecte;
+    } else if (data?.apiTypes[0].name === "Combat") {
+      return typePsy;
+    } else if (data?.apiTypes[0].name === "Sol") {
+      return typeRoche;
+    } else if (data?.apiTypes[0].name === "Spectre") {
+      return;
+    } else if (data?.apiTypes[0].name === "Acier") {
+      return;
+    } else if (data?.apiTypes[0].name === "Plante") {
+      return;
+    } else if (data?.apiTypes[0].name === "Glace") {
+      return;
+    } else if (data?.apiTypes[0].name === "Dragon") {
+      return;
+    } else if (data?.apiTypes[0].name === "Fée") {
+      return;
     } else {
       return noType;
     }

@@ -9,29 +9,28 @@ import ErrorBoundary from "../components/components/ErrorBoundary";
 import { Link } from "react-router-dom";
 
 const Pokedex = () => {
-  const { data, isLoading } = usePokemons();
   const { startIndex, handleClickLoadMore, handleClickLoadLess, endIndex } =
     useLoadMoreOrLess();
 
+  const { data, isLoading } = usePokemons();
+
   const [searchTerm, setSearchTerm] = useState("");
 
-  const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchTerm(event.target.value);
-  };
-
-  const filteredPokemons = data.filter((pokemon: pokemonInterface) =>
-    pokemon.name.toLowerCase().includes(searchTerm.toLowerCase())
+  const filteredPokemons = data.filter(
+    (pokemon) =>
+      pokemon.name.toLowerCase().includes(searchTerm) ||
+      pokemon.apiTypes[0].name.toLowerCase().includes(searchTerm)
   );
 
   return (
     <div className="relative">
-      <div className="flex justify-center mt-6 mb-4">
+      <div className=" flex justify-center mt-6 mb-4">
         <input
           type="text"
-          placeholder="Rechercher un Pokemon"
+          placeholder="Rechercher par nom ou type "
           className="px-4 py-2 border-2 border-gray-400 rounded-lg  md:w-64"
-          value={searchTerm}
-          onChange={handleSearch}
+          value={searchTerm.trimStart()}
+          onChange={(e) => setSearchTerm(e.target.value)}
         />
       </div>
       <div className="flex gap-4 overflow-hidden flex-wrap py-12 mb-16  place-content-center">
