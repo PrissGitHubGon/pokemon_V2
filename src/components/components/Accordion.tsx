@@ -5,7 +5,7 @@ import {
 } from "@material-tailwind/react";
 import { useState, Fragment } from "react";
 
-const AccordionMobile = (props: any) => {
+const Accordionn = (props: any) => {
   const { moreLessButton, text, title } = props;
   const [open, setOpen] = useState(0);
 
@@ -23,7 +23,7 @@ const AccordionMobile = (props: any) => {
       <Accordion open={open === 1} animate={customAnimation}>
         <AccordionHeader
           onClick={() => handleOpen(1)}
-          className="flex justify-center font-DynaPuff text-sm sm:text-2xl  sm:remove-item "
+          className="flex justify-center font-DynaPuff text-xl sm:text-2xl  sm:remove-item "
         >
           {title}
         </AccordionHeader>
@@ -35,4 +35,4 @@ const AccordionMobile = (props: any) => {
     </Fragment>
   );
 };
-export default AccordionMobile;
+export default Accordionn;

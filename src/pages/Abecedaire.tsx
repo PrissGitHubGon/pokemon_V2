@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 import { pokemonInterface } from "../entities/pokemon-interface";
 import useLoadMoreOrLessSidebar from "../hooks/use-LoadMoreLessSidebar";
 
-import AccordionMobile from "../components/components/Accordion";
+import Accordionn from "../components/components/Accordion";
 
-const AbecedaireDesktop = (props: any) => {
+const Abecedaire = (props: any) => {
   const { letter } = props;
 
   const {
@@ -18,7 +18,7 @@ const AbecedaireDesktop = (props: any) => {
   return (
     <div className="">
       <div className=" relative  cursor-pointer flex  ">
-        <AccordionMobile
+        <Accordionn
           title={letter}
           text={sortedData
             .filter((pokemon) => pokemon.name[0].toUpperCase() === letter)
@@ -62,4 +62,4 @@ const AbecedaireDesktop = (props: any) => {
     </div>
   );
 };
-export default AbecedaireDesktop;
+export default Abecedaire;

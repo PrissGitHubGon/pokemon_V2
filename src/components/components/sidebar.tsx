@@ -1,7 +1,7 @@
 import usePokemons from "../../hooks/use-pokemons";
 import LoaderPokeball from "./Loader-pokeball";
 import useLoadMoreOrLessSidebar from "../../hooks/use-LoadMoreLessSidebar";
-import AbecedaireDesktop from "../../pages/Abecedaire-desktop";
+import Abecedaire from "../../pages/Abecedaire";
 
 const Sidebar = (props: any) => {
   const { children } = props;
@@ -18,11 +18,7 @@ const Sidebar = (props: any) => {
             <ul className="text-gray-500 ">
               {uniqueLetters.map((letter) => (
                 <>
-                  <AbecedaireDesktop
-                    keyLetter={letter}
-                    letter={letter}
-                    idProps
-                  />
+                  <Abecedaire keyLetter={letter} letter={letter} idProps />
                 </>
               ))}{" "}
             </ul>
