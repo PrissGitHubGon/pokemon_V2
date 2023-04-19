@@ -19,6 +19,8 @@ const Abecedaire = (props: any) => {
     <div className="">
       <div className=" relative  cursor-pointer flex  ">
         <Accordionn
+          classNameHeader="flex justify-center font-DynaPuff text-xl sm:text-2xl md:text-4xl sm:remove-item leading-loose"
+          classNameBody="font-DynaPuffflex  text-xxs sm:text-1xl md:text-2xl  text-center"
           title={letter}
           text={sortedData
             .filter((pokemon) => pokemon.name[0].toUpperCase() === letter)

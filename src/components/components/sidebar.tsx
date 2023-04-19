@@ -14,7 +14,7 @@ const Sidebar = (props: any) => {
         <LoaderPokeball />
       ) : (
         <>
-          <div className=" bg-pokemon-sidebar text-white w-16 sm:w-36 md:px-4 md:py-6 flex-shrink-0  ">
+          <div className=" bg-pokemon-sidebar text-white w-16 sm:w-36 md:w-60 md:px-4 md:py-6 flex-shrink-0  ">
             <ul className="text-gray-500 ">
               {uniqueLetters.map((letter) => (
                 <>

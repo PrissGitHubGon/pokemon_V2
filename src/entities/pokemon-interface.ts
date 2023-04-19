@@ -10,5 +10,7 @@ export type pokemonInterface = {
     data: string ;
     type: string ;
     pokemonType: string ;
+    apiResistances: any ;
+    resistance:string
   };
   

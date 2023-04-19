@@ -6,7 +6,7 @@ import {
 import { useState, Fragment } from "react";
 
 const Accordionn = (props: any) => {
-  const { moreLessButton, text, title } = props;
+  const { moreLessButton, text, title, classNameHeader, classNameBody } = props;
   const [open, setOpen] = useState(0);
 
   const handleOpen = (value: any) => {
@@ -23,11 +23,11 @@ const Accordionn = (props: any) => {
       <Accordion open={open === 1} animate={customAnimation}>
         <AccordionHeader
           onClick={() => handleOpen(1)}
-          className="flex justify-center font-DynaPuff text-xl sm:text-2xl  sm:remove-item leading-loose"
+          className={classNameHeader}
         >
           {title}
         </AccordionHeader>
-        <AccordionBody className="font-DynaPuffflex  text-xxs sm:text-1xl text-center">
+        <AccordionBody className={classNameBody}>
           {text}
           {moreLessButton}
         </AccordionBody>
