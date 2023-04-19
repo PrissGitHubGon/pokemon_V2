@@ -19,19 +19,34 @@ const Pokedex = () => {
   const filteredPokemons = data.filter(
     (pokemon) =>
       pokemon.name.toLowerCase().includes(searchTerm) ||
-      pokemon.apiTypes[0].name.toLowerCase().includes(searchTerm)
+      pokemon.apiTypes[0].name.toLowerCase().includes(searchTerm) ||
+      pokemon.apiGeneration.toString().includes(searchTerm)
   );
 
   return (
     <div className="relative">
       <div className=" flex justify-center mt-6 mb-4">
-        <input
-          type="text"
-          placeholder="Rechercher par nom ou type "
-          className="px-4 py-2 border-2 border-gray-400 rounded-lg  md:w-64"
-          value={searchTerm.trimStart()}
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
+        <div>
+          <div className="text-center text-sm sm:text-lg ">
+            {" "}
+            <p className="font-DynaPuff">
+              Il est possible d'effectuer une recherche de Pokémon
+            </p>
+            <p className="font-DynaPuff">
+              en utilisant leur nom, leur type ou leur génération
+            </p>
+            <p className="text-xs mt-2">(En lettres minuscules)</p>
+          </div>
+          <div className="flex justify-center mt-3">
+            <input
+              type="text"
+              placeholder="Rechercher"
+              className="px-4 py-2 border-2 border-gray-400 rounded-lg  md:w-64"
+              value={searchTerm.trimStart()}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+          </div>
+        </div>
       </div>
       <div className="flex gap-4 overflow-hidden flex-wrap py-12 mb-16  place-content-center">
         {isLoading ? (
