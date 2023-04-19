@@ -9,14 +9,14 @@ import PokemonId from "./pages/Pokemon_id";
 import Notfound from "./pages/NotFound";
 import { Col, Container, Row } from "reactstrap";
 import Sidebar from "./components/components/sidebar";
-import AbecedaireMobile from "./pages/Abecedaire-mobile";
+
 import Footer from "./components/Footer";
 
 function App() {
   return (
     <>
       <>
-        <Container fluid className="h-100 layout-overflow">
+        <Container fluid className="h-100 layout-overflow layout-secure">
           <Row className="h-100">
             <Col lg="2" md="3" className="  p-0 m-0 ">
               <Header />
@@ -26,7 +26,6 @@ function App() {
                 <Sidebar>
                   {" "}
                   <Routes>
-                    <Route path="/abecedaire" element={<AbecedaireMobile />} />
                     <Route path="/*" element={<Notfound />} />
                     <Route path="/" element={<Pokedex />} />
                     <Route path="/:pokemonId" element={<PokemonId />} />

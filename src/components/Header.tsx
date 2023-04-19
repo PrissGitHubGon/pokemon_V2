@@ -1,5 +1,5 @@
 import NavDesktop from "./components/Nav-desktop";
-import NavMobile from "./components/Nav-mobile";
+// import NavMobile from "./components/Nav-mobile";
 
 const Header = () => {
   return (
@@ -12,7 +12,7 @@ const Header = () => {
         />
       </a>
       <nav>
-        <NavMobile />
+        {/* <NavMobile /> */}
         <NavDesktop />
       </nav>
     </div>

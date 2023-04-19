@@ -23,11 +23,11 @@ const AccordionMobile = (props: any) => {
       <Accordion open={open === 1} animate={customAnimation}>
         <AccordionHeader
           onClick={() => handleOpen(1)}
-          className="font-DynaPuff text-2xl flex justify-center"
+          className="flex justify-center font-DynaPuff text-sm sm:text-2xl  sm:remove-item "
         >
           {title}
         </AccordionHeader>
-        <AccordionBody className="font-DynaPuffflex text-center">
+        <AccordionBody className="font-DynaPuffflex  text-xs sm:text-1xl text-center">
           {text}
           {moreLessButton}
         </AccordionBody>

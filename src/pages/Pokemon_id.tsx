@@ -13,11 +13,11 @@ const PokemonId = () => {
   ) : (
     <>
       <div
-        className="w-full  flex justify-center  pb-16 mt-10 sm:pb-36 md:mt-10"
+        className=" w-full  flex justify-center  pb-16 mt-10 sm:pb-36 md:mt-10"
         key={params.pokemonId}
       >
-        <div className="flex border-8 rounded-md border-yellow-200 justify-center ">
-          <div className={PokemonType()}>
+        <div className="flex border-8 rounded-md border-yellow-200 sm:justify-center ">
+          <div className={`${PokemonType()} w-full`}>
             <div className="flex justify-between w-11/12 mx-auto">
               <p className="font-DynaPuff">{data?.name}</p>
               <div className="flex">
@@ -34,7 +34,7 @@ const PokemonId = () => {
               </div>
             </div>
             <img
-              className="mx-auto object-contain md:object-cover h-96 md:h-auto border-4 border-yellow-200 m-1  md:w-56 rounded-lg  md:rounded-lg"
+              className="mx-auto object-cover h-2/4 sm:h-auto border-4 border-yellow-200 m-1  md:w-56 rounded-lg  md:rounded-lg"
               src={data?.image}
               alt={data?.name}
             />
@@ -94,24 +94,11 @@ const PokemonId = () => {
           </div>
         </div>
       </div>
-      <Link to="/" className="hidden md:block">
-        <p className="text-center text-3xl italic bg-clip-text text-transparent bg-gradient-to-r from-red-900 via-orange-800 to-amber-700 font-bold">
+      <Link to="/" className="">
+        <p className="text-center md:text-3xl italic bg-clip-text text-transparent bg-gradient-to-r from-red-900 via-orange-800 to-amber-700 font-bold">
           Retour
         </p>
       </Link>
-
-      <div className="md:hidden flex justify-between  ">
-        <Link to="/abecedaire">
-          <p className="text-center text-xl  italic bg-clip-text text-transparent bg-gradient-to-r from-red-900 via-orange-800 to-amber-700 font-bold">
-            Retour abécédaire
-          </p>
-        </Link>
-        <Link to="/">
-          <p className="text-center text-xl pl-4 italic bg-clip-text text-transparent bg-gradient-to-r from-red-900 via-orange-800 to-amber-700 font-bold">
-            Retour Pokedex
-          </p>
-        </Link>
-      </div>
     </>
   );
 };
