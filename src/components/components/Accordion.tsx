@@ -27,7 +27,7 @@ const AccordionMobile = (props: any) => {
         >
           {title}
         </AccordionHeader>
-        <AccordionBody className="font-DynaPuffflex  text-xs sm:text-1xl text-center">
+        <AccordionBody className="font-DynaPuffflex  text-xxs sm:text-1xl text-center">
           {text}
           {moreLessButton}
         </AccordionBody>
