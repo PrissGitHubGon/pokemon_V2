@@ -23,7 +23,7 @@ const Accordionn = (props: any) => {
       <Accordion open={open === 1} animate={customAnimation}>
         <AccordionHeader
           onClick={() => handleOpen(1)}
-          className="flex justify-center font-DynaPuff text-xl sm:text-2xl  sm:remove-item "
+          className="flex justify-center font-DynaPuff text-xl sm:text-2xl  sm:remove-item leading-loose"
         >
           {title}
         </AccordionHeader>
