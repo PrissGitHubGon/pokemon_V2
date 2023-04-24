@@ -109,38 +109,41 @@ const PokemonId = () => {
         </div>
 
         {/* *********************************************************  */}
-        <table className="table-auto mt-10  ">
-          <thead>
-            <tr>
-              <th className="text-center px-2 text-sm sm:text-lg md:text-1xl">
-                Résistances
-              </th>
-              <th className="text-center px-2  text-sm sm:text-lg md:text-1xl">
-                Multiplicateur
-              </th>
-              <th className="text-center px-2  text-sm sm:text-lg md:text-1xl">
-                Relation
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {data?.apiResistances.map((resistance: pokemonInterface) => {
-              return (
-                <tr>
-                  <td className="text-center text-xs sm:text-md md:text-xl">
-                    {resistance.name}
-                  </td>
-                  <td className="text-center text-xs sm:text-md md:text-xl">
-                    {resistance.damage_multiplier}
-                  </td>
-                  <td className="text-center text-xs sm:text-md md:text-xl">
-                    {resistance.damage_relation}
-                  </td>
-                </tr>
-              );
-            })}{" "}
-          </tbody>
-        </table>
+        <div className=" flex justify-center ">
+          {" "}
+          <table className="table-auto mt-10 ">
+            <thead>
+              <tr>
+                <th className="text-center px-2 text-sm sm:text-lg md:text-1xl">
+                  Résistances
+                </th>
+                <th className="text-center px-2  text-sm sm:text-lg md:text-1xl">
+                  Multiplicateur
+                </th>
+                <th className="text-center px-2  text-sm sm:text-lg md:text-1xl">
+                  Relation
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {data?.apiResistances.map((resistance: pokemonInterface) => {
+                return (
+                  <tr>
+                    <td className="text-center text-xs sm:text-md md:text-xl">
+                      {resistance.name}
+                    </td>
+                    <td className="text-center text-xs sm:text-md md:text-xl">
+                      {resistance.damage_multiplier}
+                    </td>
+                    <td className="text-center text-xs sm:text-md md:text-xl">
+                      {resistance.damage_relation}
+                    </td>
+                  </tr>
+                );
+              })}{" "}
+            </tbody>
+          </table>
+        </div>
       </div>
 
       <Link to="/" className="">
