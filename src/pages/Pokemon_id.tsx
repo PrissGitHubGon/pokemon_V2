@@ -17,8 +17,8 @@ const PokemonId = () => {
       <div className="md:flex  justify-center ">
         <div className=" mx-10 pb-16 mt-10  " key={params.pokemonId}>
           <div className="flex border-8 rounded-md border-yellow-200 sm:justify-center ">
-            <div className={`${PokemonType()} w-full h-full md:px-16`}>
-              <div className="flex justify-between w-11/12 mx-auto">
+            <div className={`${PokemonType()} w-full h-full md:px-12`}>
+              <div className="flex justify-between  mx-auto">
                 <p className="font-DynaPuff">{data?.name} </p>
                 <div className="flex">
                   <p>
@@ -62,7 +62,7 @@ const PokemonId = () => {
                   ) : null}
                 </div>
               </div>
-              <div className=" border-b-2 border-yellow-200"></div>
+              <div className="w-full border-b-2 border-yellow-200"></div>
 
               <div className="flex justify-around py-3">
                 <LittleComponentCenter
