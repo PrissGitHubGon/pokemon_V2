@@ -136,13 +136,13 @@ const PokemonId = () => {
               {data?.apiResistances.map((resistance: pokemonInterface) => {
                 return (
                   <tr>
-                    <td className="text-center text-xs sm:text-md md:text-xl">
+                    <td className="text-center text-xxs-Id sm:text-md md:text-xl">
                       {resistance.name}
                     </td>
-                    <td className="text-center text-xs sm:text-md md:text-xl">
+                    <td className="text-center text-xxs-Id sm:text-md md:text-xl">
                       {resistance.damage_multiplier}
                     </td>
-                    <td className="text-center text-xs sm:text-md md:text-xl">
+                    <td className="text-center text-xxs-Id sm:text-md md:text-xl">
                       {resistance.damage_relation}
                     </td>
                   </tr>
