@@ -15,7 +15,10 @@ const PokemonId = () => {
   ) : (
     <>
       <div className="md:flex  justify-center ">
-        <div className=" mx-10 pb-16 mt-10  " key={params.pokemonId}>
+        <div
+          className=" pb-16 mt-10  w-full md:w-auto md:mx-10"
+          key={params.pokemonId}
+        >
           <div className="flex border-8 rounded-md border-yellow-200 sm:justify-center ">
             <div className={`${PokemonType()} w-full h-full md:px-12`}>
               <div className="flex justify-between  mx-auto">
@@ -45,7 +48,7 @@ const PokemonId = () => {
                 <div
                   className={
                     data?.apiTypes[1]
-                      ? "flex flex-row justify-center space-x-10 my-2"
+                      ? "flex flex-row justify-around space-x-10 my-2"
                       : "flex my-2"
                   }
                 >
@@ -63,10 +66,12 @@ const PokemonId = () => {
                 </div>
               </div>
               <div className="w-full border-b-2 border-yellow-200"></div>
-
+              <p className="font-DynaPuff flex justify-center text-md my-2 ">
+                Attaque :
+              </p>
               <div className="flex justify-around py-3">
                 <LittleComponentCenter
-                  titleTop={"Attaque"}
+                  titleTop={"Normal"}
                   titleBottom={data?.stats?.attack}
                 />
                 <LittleComponentCenter
@@ -76,10 +81,12 @@ const PokemonId = () => {
               </div>
 
               <div className="border-b-2 border-yellow-200"></div>
-
+              <p className="font-DynaPuff flex justify-center text-md my-2 ">
+                Défense :
+              </p>
               <div className="flex justify-around py-3">
                 <LittleComponentCenter
-                  titleTop={"Défense"}
+                  titleTop={"Normal"}
                   titleBottom={data?.stats?.defense}
                 />
                 <LittleComponentCenter
