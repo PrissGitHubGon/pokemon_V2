@@ -6,9 +6,11 @@ export type pokemonInterface = {
     id: number;
     stats: number;
     apiGeneration: number;
+    pokedexId: number;
     HP: number | undefined;
     data: string ;
     type: string ;
+    slug: string ;
     pokemonType: string ;
     apiResistances: any ;
     resistance:string

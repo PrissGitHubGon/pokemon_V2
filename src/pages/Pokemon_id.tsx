@@ -14,7 +14,7 @@ const PokemonId = () => {
   ) : (
     <>
       <div className="md:flex  justify-center ">
-        <div className=" mx-4  pb-16 mt-10  " key={params.pokemonId}>
+        <div className=" mx-10 pb-16 mt-10  " key={params.pokemonId}>
           <div className="flex border-8 rounded-md border-yellow-200 sm:justify-center ">
             <div className={`${PokemonType()} w-full`}>
               <div className="flex justify-between w-11/12 mx-auto">
@@ -101,7 +101,7 @@ const PokemonId = () => {
         <i className="fa-solid fa-arrow-down fa-fade text-4xl sm:hidden flex justify-center"></i>
         {/* ****************************************************************************************************  */}
         <div
-          className="w-full md:w-64 flex justify-center   mt-10  mx-4  pb-10 sm:pb-0"
+          className="w-full md:w-64 flex justify-center   mt-10  mx-10  pb-10 sm:pb-0"
           key={params.pokemonId}
         >
           <div className="flex  sm:justify-center ">

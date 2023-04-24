@@ -59,14 +59,19 @@ const Pokedex = () => {
                 return (
                   <ErrorBoundary fallback={<Error404 />}>
                     <ThumbnailCard
-                      link={`/${pokemon.id}`}
+                      link={`/${pokemon.id}/${pokemon.slug}`}
                       key={pokemon.id}
                       imageUrl={pokemon.image}
                       imageUrlBis={pokemon.image}
                       imageUrlTitleAlt={pokemon.name}
                       children={
                         <p className="my-2 font-DynaPuff " key={pokemon.id}>
-                          <Link to={`/${pokemon.id}`}>{pokemon?.name}</Link>
+                          <Link to={`/${pokemon.id}/${pokemon.slug}`}>
+                            {pokemon?.name}{" "}
+                            <span className="text-xs py-2 font-DynaPuff">
+                              #{pokemon.id}
+                            </span>
+                          </Link>
                         </p>
                       }
                     />

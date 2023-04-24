@@ -28,7 +28,7 @@ function App() {
                   <Routes>
                     <Route path="/*" element={<Notfound />} />
                     <Route path="/" element={<Pokedex />} />
-                    <Route path="/:pokemonId" element={<PokemonId />} />
+                    <Route path="/:pokemonId/:slug" element={<PokemonId />} />
                   </Routes>{" "}
                 </Sidebar>
               </>
