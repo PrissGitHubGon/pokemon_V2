@@ -34,7 +34,7 @@ const Abecedaire = (props: any) => {
                     className=" font-DynaPuff cursor-pointer text-md"
                     key={id}
                   >
-                    <Link to={`/${id}`}>{pokemon?.name}</Link>
+                    <Link to={`/${id}/${pokemon.slug}`}>{pokemon?.name}</Link>
                   </li>
                 </div>
               );
