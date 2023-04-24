@@ -68,9 +68,6 @@ const Pokedex = () => {
                         <p className="my-2 font-DynaPuff " key={pokemon.id}>
                           <Link to={`/${pokemon.id}/${pokemon.slug}`}>
                             {pokemon?.name}{" "}
-                            <span className="text-xs py-2 font-DynaPuff">
-                              #{pokemon.id}
-                            </span>
                           </Link>
                         </p>
                       }
