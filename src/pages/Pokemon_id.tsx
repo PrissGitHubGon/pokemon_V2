@@ -70,7 +70,7 @@ const PokemonId = () => {
                   titleBottom={data?.stats?.attack}
                 />
                 <LittleComponentCenter
-                  titleTop={"Attaque spéciale"}
+                  titleTop={"Spéciale"}
                   titleBottom={data?.stats?.special_attack}
                 />
               </div>
@@ -83,7 +83,7 @@ const PokemonId = () => {
                   titleBottom={data?.stats?.defense}
                 />
                 <LittleComponentCenter
-                  titleTop={"Défense spéciale"}
+                  titleTop={"Spéciale"}
                   titleBottom={data?.stats?.special_defense}
                 />
               </div>
