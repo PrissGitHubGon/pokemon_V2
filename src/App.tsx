@@ -11,6 +11,7 @@ import { Col, Container, Row } from "reactstrap";
 import Sidebar from "./components/components/sidebar";
 
 import Footer from "./components/Footer";
+import Sources from "./pages/Sources";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
                   <Routes>
                     <Route path="/*" element={<Notfound />} />
                     <Route path="/" element={<Pokedex />} />
+                    <Route path="/sources" element={<Sources />} />
                     <Route path="/:pokemonId/:slug" element={<PokemonId />} />
                   </Routes>{" "}
                 </Sidebar>

@@ -1,0 +1,28 @@
+{
+  "stacks": [
+    {
+      "title": "React.js",
+      "path": "https://create-react-app.dev/docs/adding-typescript/"
+    },
+    {
+      "title": "TypeScript",
+      "path": "https://create-react-app.dev/docs/adding-typescript/"
+    },
+    {
+      "title": "Tailwind css",
+      "path": "https://tailwindcss.com/"
+    },
+    {
+      "title": "Sass",
+      "path": "https://sass-lang.com/install"
+    },
+    {
+      "title": "Bootstrap",
+      "path": "https://getbootstrap.com/docs/5.3/getting-started/introduction/"
+    },
+    {
+      "title": "React Router Dom",
+      "path": "https://www.npmjs.com/package/react-router-dom"
+    }
+  ]
+}
