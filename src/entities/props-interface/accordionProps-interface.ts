@@ -1,8 +1,6 @@
-import { ChildrenPropsInterface } from "./childrenProps-interface";
-
 export type AccordionPropsInterface = {
-  moreLessButton: ChildrenPropsInterface;
-  text: string;
+  moreLessButton: JSX.Element;
+  text: string | {};
   title: string;
   classNameHeader: string;
   classNameBody: string;

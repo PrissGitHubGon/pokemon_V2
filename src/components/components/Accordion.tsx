@@ -4,8 +4,9 @@ import {
   AccordionHeader,
 } from "@material-tailwind/react";
 import { useState, Fragment } from "react";
+import { AccordionPropsInterface } from "../../entities/props-interface/accordionProps-interface";
 
-const Accordionn = (props: any) => {
+const Accordionn = (props: AccordionPropsInterface) => {
   const { moreLessButton, text, title, classNameHeader, classNameBody } = props;
   const [open, setOpen] = useState<number>(0);
 
