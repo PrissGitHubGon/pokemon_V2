@@ -7,7 +7,7 @@ import { useState, Fragment } from "react";
 
 const Accordionn = (props: any) => {
   const { moreLessButton, text, title, classNameHeader, classNameBody } = props;
-  const [open, setOpen] = useState(0);
+  const [open, setOpen] = useState<number>(0);
 
   const handleOpen = (value: any) => {
     setOpen(open === value ? 0 : value);

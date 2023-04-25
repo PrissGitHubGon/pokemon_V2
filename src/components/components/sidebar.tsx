@@ -2,8 +2,9 @@ import usePokemons from "../../hooks/use-pokemons";
 import LoaderPokeball from "./Loader-pokeball";
 import useLoadMoreOrLessSidebar from "../../hooks/use-LoadMoreLessSidebar";
 import Abecedaire from "../../pages/Abecedaire";
+import { ChildrenPropsInterface } from "../../entities/props-interface/childrenProps-interface";
 
-const Sidebar = (props: any) => {
+const Sidebar = (props: ChildrenPropsInterface) => {
   const { children } = props;
   const { isLoading } = usePokemons();
   const { uniqueLetters } = useLoadMoreOrLessSidebar();

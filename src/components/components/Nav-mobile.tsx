@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const NavMobile = () => {
-  const [isNavOpen, setIsNavOpen] = useState(false);
+  const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
   const handleIsOpen = () => {
     setIsNavOpen(!isNavOpen);
   };

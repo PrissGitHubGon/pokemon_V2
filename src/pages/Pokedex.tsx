@@ -14,7 +14,7 @@ const Pokedex = () => {
 
   const { data, isLoading } = usePokemons();
 
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState<string>("");
 
   const filteredPokemons = data.filter(
     (pokemon) =>

@@ -5,6 +5,7 @@ import useThemeTypePokemon from "../hooks/use-Theme-type-pokemon";
 import usePokemonId from "../hooks/use-pokemon-id";
 import { pokemonInterface } from "../entities/pokemon-interface";
 import LittleComponentCenter from "../components/components/Little_Component_center";
+import TableStat from "../components/components/Table";
 
 const PokemonId = () => {
   const { PokemonType } = useThemeTypePokemon();
@@ -26,7 +27,7 @@ const PokemonId = () => {
                 <div className="flex">
                   <p>
                     <span className="text-xs font-DynaPuff ">PV</span>
-                    {/* @ts-ignore */}
+
                     <span className="font-bold">{data?.stats?.HP}</span>
                   </p>
                   <img
@@ -117,23 +118,9 @@ const PokemonId = () => {
 
         {/* *********************************************************  */}
         <div className=" flex justify-center ">
-          {" "}
-          <table className="table-auto mt-10 ">
-            <thead>
-              <tr>
-                <th className="text-center px-2 text-sm sm:text-lg md:text-1xl">
-                  Résistances
-                </th>
-                <th className="text-center px-2  text-sm sm:text-lg md:text-1xl">
-                  Multiplicateur
-                </th>
-                <th className="text-center px-2  text-sm sm:text-lg md:text-1xl">
-                  Relation
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {data?.apiResistances.map((resistance: pokemonInterface) => {
+          <TableStat
+            children={data?.apiResistances.map(
+              (resistance: pokemonInterface) => {
                 return (
                   <tr>
                     <td className="text-center text-xxs-Id sm:text-md md:text-xl">
@@ -147,9 +134,9 @@ const PokemonId = () => {
                     </td>
                   </tr>
                 );
-              })}{" "}
-            </tbody>
-          </table>
+              }
+            )}
+          />
         </div>
       </div>
 

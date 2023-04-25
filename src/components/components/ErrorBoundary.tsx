@@ -6,7 +6,7 @@ interface ErrorBoundaryProps {
 }
 
 function ErrorBoundary(props: ErrorBoundaryProps) {
-  const [hasError, setHasError] = useState(false);
+  const [hasError, setHasError] = useState<boolean>(false);
 
   function handleCatch(_: Error, errorInfo: ErrorInfo) {
     console.error("ErrorBoundary caught an error:", errorInfo);

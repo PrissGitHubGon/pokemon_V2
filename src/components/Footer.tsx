@@ -1,9 +1,6 @@
-import React from "react";
-
 import { Link } from "react-router-dom";
 
 const Footer = () => {
-  //   Fonction qui renvoie l'année en cours
   const getCurrentYear = () => {
     return new Date().getFullYear();
   };

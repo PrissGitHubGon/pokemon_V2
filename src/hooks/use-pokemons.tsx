@@ -4,7 +4,7 @@ import axios from "axios";
 
 const usePokemons = () => {
   const [data, setData] = useState<pokemonInterface[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
     const fetchData = async () => {
