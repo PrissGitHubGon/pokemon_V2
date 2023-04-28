@@ -32,6 +32,17 @@ const Footer = () => {
         <Link to="text-white-800">
           <span> </span> Priscillia Gonçalves
         </Link>
+        <Link
+          to="/sources"
+          className="flex justify-center font-bold"
+          style={{ color: "#386AAB" }}
+        >
+          Sources{" "}
+          <i
+            className="fa-solid fa-gear pt-1 mx-2"
+            style={{ color: "#386AAB" }}
+          ></i>
+        </Link>
       </div>
     </footer>
   );

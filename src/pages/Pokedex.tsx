@@ -18,8 +18,10 @@ const Pokedex = () => {
 
   const filteredPokemons = data.filter(
     (pokemon) =>
-      pokemon.name.toLowerCase().includes(searchTerm) ||
-      pokemon.apiTypes[0].name.toLowerCase().includes(searchTerm) ||
+      pokemon.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      pokemon.apiTypes.some((type: any) =>
+        type.name.toLowerCase().includes(searchTerm.toLowerCase())
+      ) ||
       pokemon.apiGeneration.toString().includes(searchTerm)
   );
 
@@ -35,7 +37,6 @@ const Pokedex = () => {
             <p className="font-DynaPuff">
               en utilisant leur nom, leur type ou leur génération
             </p>
-            <p className="text-xs mt-2">(En lettres minuscules)</p>
           </div>
           <div className="flex justify-center mt-3">
             <input

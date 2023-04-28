@@ -2,7 +2,6 @@ import usePokemons from "../../hooks/use-pokemons";
 import LoaderPokeball from "./Loader-pokeball";
 import useLoadMoreOrLessSidebar from "../../hooks/use-LoadMoreLessSidebar";
 import Abecedaire from "../../pages/Abecedaire";
-import { Link } from "react-router-dom";
 
 const Sidebar = (props: any) => {
   const { children } = props;
@@ -23,12 +22,6 @@ const Sidebar = (props: any) => {
                 </>
               ))}{" "}
             </ul>
-            <Link
-              to="/sources"
-              className="flex justify-center text-gray-500  pt-32"
-            >
-              Sources
-            </Link>
           </div>
           <div className="w-full px-4 py-6">{children}</div>
         </>
