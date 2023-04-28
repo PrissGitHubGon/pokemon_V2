@@ -15,7 +15,7 @@ const Pokedex = () => {
   const { data, isLoading } = usePokemons();
 
   const [searchTerm, setSearchTerm] = useState<string>("");
-
+  // Fonction qui permet de rechercher le nom, le type ou la génération d'un Pokémon, en minuscules ou en majuscules
   const filteredPokemons = data.filter(
     (pokemon) =>
       pokemon.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
