@@ -50,7 +50,7 @@ const PokemonId = () => {
                   className={
                     data?.apiTypes[1]
                       ? "flex flex-row justify-around space-x-10 my-2"
-                      : "flex my-2"
+                      : "flex justify-center "
                   }
                 >
                   <LittleComponentCenter
