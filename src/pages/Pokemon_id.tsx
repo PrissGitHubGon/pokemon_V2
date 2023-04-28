@@ -66,7 +66,9 @@ const PokemonId = () => {
                   ) : null}
                 </div>
               </div>
-              <div className="w-full border-b-2 border-amber-400"></div>
+              <div className=" flex justify-center">
+                <span className="w-3/4 my-2 border-b-2 md:w-full border-amber-400"></span>
+              </div>
               <p className="font-DynaPuff flex justify-center text-md my-2 ">
                 Attaque :
               </p>
@@ -81,7 +83,9 @@ const PokemonId = () => {
                 />
               </div>
 
-              <div className="border-b-2 border-amber-400"></div>
+              <div className=" flex justify-center">
+                <span className="w-3/4 md:w-full my-2 border-b-2 border-amber-400"></span>
+              </div>
               <p className="font-DynaPuff flex justify-center text-md my-2 ">
                 Défense :
               </p>
@@ -96,7 +100,9 @@ const PokemonId = () => {
                 />
               </div>
 
-              <div className="border-b-2 border-amber-400"></div>
+              <div className=" flex justify-center">
+                <span className="w-3/4 my-2 md:w-full border-b-2 border-amber-400"></span>
+              </div>
               <div className="flex justify-around">
                 <p className="text-xs py-2 font-DynaPuff">
                   Génération{" "}

@@ -17,6 +17,7 @@ const useThemeTypePokemon = () => {
   const typePlante = "bg-gradient-to-r from-lime-950  to-lime-300 py-3";
   const typeTenebre = "bg-gradient-to-r from-stone-800  to-stone-200 py-3";
   const typeSpectre = "bg-gradient-to-r from-violet-600 to-stone-200 py-3";
+  const typeAcier = "bg-gradient-to-r from-gray-600 to-stone-200 py-3";
 
   const PokemonType = () => {
     if (data?.apiTypes[0].name === "Poison") {
@@ -46,7 +47,7 @@ const useThemeTypePokemon = () => {
     } else if (data?.apiTypes[0].name === "Spectre") {
       return typeSpectre;
     } else if (data?.apiTypes[0].name === "Acier") {
-      return;
+      return typeAcier;
     } else if (data?.apiTypes[0].name === "Plante") {
       return typePlante;
     } else if (data?.apiTypes[0].name === "Glace") {
