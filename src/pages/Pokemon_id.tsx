@@ -20,7 +20,7 @@ const PokemonId = () => {
           className=" pb-16 mt-10  w-full md:w-auto md:mx-10"
           key={params.pokemonId}
         >
-          <div className="flex border-8 rounded-md border-yellow-200 sm:justify-center ">
+          <div className="flex border-8 rounded-md border-amber-400 sm:justify-center ">
             <div className={`${PokemonType()} w-full h-full md:px-12`}>
               <div className="flex justify-between  mx-auto">
                 <p className="font-DynaPuff">{data?.name} </p>
@@ -38,7 +38,7 @@ const PokemonId = () => {
                 </div>
               </div>
               <img
-                className="mx-auto object-contain h-2/4 sm:h-auto md:border-4 border-yellow-200 m-1  md:w-56 rounded-lg  md:rounded-lg"
+                className="mx-auto object-contain h-2/4 sm:h-auto md:border-4 border-amber-400 m-1  md:w-56 rounded-lg  md:rounded-lg"
                 src={data?.image}
                 alt={data?.name}
               />
@@ -66,7 +66,7 @@ const PokemonId = () => {
                   ) : null}
                 </div>
               </div>
-              <div className="w-full border-b-2 border-yellow-200"></div>
+              <div className="w-full border-b-2 border-amber-400"></div>
               <p className="font-DynaPuff flex justify-center text-md my-2 ">
                 Attaque :
               </p>
@@ -81,7 +81,7 @@ const PokemonId = () => {
                 />
               </div>
 
-              <div className="border-b-2 border-yellow-200"></div>
+              <div className="border-b-2 border-amber-400"></div>
               <p className="font-DynaPuff flex justify-center text-md my-2 ">
                 Défense :
               </p>
@@ -96,7 +96,7 @@ const PokemonId = () => {
                 />
               </div>
 
-              <div className="border-b-2 border-yellow-200"></div>
+              <div className="border-b-2 border-amber-400"></div>
               <div className="flex justify-around">
                 <p className="text-xs py-2 font-DynaPuff">
                   Génération{" "}
