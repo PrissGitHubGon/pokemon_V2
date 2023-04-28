@@ -17,7 +17,7 @@ const PokemonId = () => {
     <>
       <div className="md:flex  justify-center ">
         <div
-          className=" pb-16 mt-10  w-full md:w-auto md:mx-10"
+          className=" pb-16 mt-10  w-full md:w-auto md:mx-10 "
           key={params.pokemonId}
         >
           <div className="flex border-8 rounded-md border-amber-400 sm:justify-center ">
